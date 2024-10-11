@@ -15,8 +15,8 @@ export const getAurinkoAuthorizationUrl = async (serviceType: 'Google' | 'Office
             id: userId
         }, select: { role: true }
     })
-
-    if (!user) throw new Error('User not found')
+    console.log("UserId = ",userId)
+    if (!user) throw new Error('Full User not found')
 
     const isSubscribed = await getSubscriptionStatus()
 
