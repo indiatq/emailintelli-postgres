@@ -8,7 +8,7 @@ import { FREE_ACCOUNTS_PER_USER, PRO_ACCOUNTS_PER_USER } from '@/app/constants';
 
 export const getAurinkoAuthorizationUrl = async (serviceType: 'Google' | 'Office365') => {
     const { userId } = await auth()
-    if (!userId) throw new Error('User not found')
+    if (!userId) throw new Error('UserId not found')
 
     const user = await db.user.findUnique({
         where: {

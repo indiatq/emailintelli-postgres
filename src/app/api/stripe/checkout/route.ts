@@ -50,7 +50,7 @@ export async function GET(request: NextRequest) {
             where: { id: userId }
         })
         if (!user) {
-            throw new Error('User not found');
+            throw new Error('UserStrip not found');
         }
 
         const stripeSubscription = await db.stripeSubscription.create({

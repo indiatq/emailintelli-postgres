@@ -9,7 +9,7 @@ export async function createCheckoutSession() {
     const { userId } = await auth();
 
     if (!userId) {
-        throw new Error('User not found');
+        throw new Error('UserStri[eCheckout] not found');
     }
 
     const session = await stripe.checkout.sessions.create({
